@@ -33,7 +33,7 @@ class Indicator
 			x_diff = @window.mouse_x - @last_x
 			y_diff = @window.mouse_y - @last_y
 
-			if x_diff.abs > y.diff.abs
+			if x_diff.abs > y_diff.abs
 				@cursor = x_diff < 0 ? LEFT : RIGHT
 			elsif y_diff.abs > x_diff.abs
 				@cursor = y_diff < 0 ? UP : DOWN

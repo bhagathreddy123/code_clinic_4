@@ -1,6 +1,6 @@
 class Tone
 
- SOUND_FILE = '4440Hz_for5sec.wav'
+ SOUND_FILE = 'ex1.wav'
 
 	 def initialize(window)
 	 	@window = window
