@@ -15,7 +15,6 @@ class PitchMaker < Gosu::Window
 		self.caption = TITLE
 		@font = Gosu::Font.new(self, Gosu::default_font_name,20)
 		@indicator = Indicator.new(self)
-	
 	end
 
 	def update
