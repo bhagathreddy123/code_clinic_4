@@ -30,7 +30,8 @@ class Tone
 	end
 
 	def speed
-		1
+		#@window.mouse_y_percent
+		adjust_playback_speed(1.0 - @window.mouse_y_percent)
 	end
 
 	def update
@@ -39,6 +40,12 @@ class Tone
 			@instance.volume = volume
 			@instance.speed = speed
 		end
+	end
+
+	def adjust_playback_speed(percent)
+		base_speed = 1.0 # A-440Hz
+		top_speed = 2.0  # A-880Hz
+		base_speed + (percent * (top_speed - base_speed))
 	end
 
 end
