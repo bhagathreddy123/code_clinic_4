@@ -26,11 +26,19 @@ class Tone
 	end
 
 	def volume
-		1
+		@window.mouse_x_percent
 	end
 
 	def speed
 		1
+	end
+
+	def update
+		puts "V: #{volume}, S: #{speed}"
+		if playing?
+			@instance.volume = volume
+			@instance.speed = speed
+		end
 	end
 
 end
