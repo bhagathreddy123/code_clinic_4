@@ -42,6 +42,8 @@ class Tone
 		end
 	end
 
+	private
+
 	def adjust_playback_speed(percent)
 		base_speed = 1.0 # A-440Hz
 		top_speed = 2.0  # A-880Hz
