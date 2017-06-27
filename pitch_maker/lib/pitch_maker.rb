@@ -21,7 +21,9 @@ class PitchMaker < Gosu::Window
 
 	def update
 		@indicator.update
-		@tone.update
+		if button_down?(Gosu::MsLeft) || button_down?(Gosu::MsRight)
+			@tone.update
+		end
 	end
 
 	def draw
