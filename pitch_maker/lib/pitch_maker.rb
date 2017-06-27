@@ -1,4 +1,6 @@
 require 'gosu'
+require_relative('indicator')
+
 class PitchMaker < Gosu::Window
 
 	WINDOW_WIDTH = 1280
@@ -12,14 +14,18 @@ class PitchMaker < Gosu::Window
 		super(WINDOW_WIDTH,WINDOW_HEIGHT,false)
 		self.caption = TITLE
 		@font = Gosu::Font.new(self, Gosu::default_font_name,20)
+		@indicator = Indicator.new(self)
+	
 	end
 
 	def update
+		@indicator.update
 	end
 
 	def draw
 		draw_background
 		display_instructions
+		@indicator.draw
 	end
 
 	def button_down(id)
